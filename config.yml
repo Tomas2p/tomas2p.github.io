@@ -1,7 +1,7 @@
-baseURL: "https://tomas2p.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+# baseURL: "https://tomas2p.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 title: Tomas2p
 paginate: 5
-theme: "PaperMod"
+theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -12,10 +12,6 @@ enableEmoji: true
 pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
 
-assets:
-  favicon: "https://raw.githubusercontent.com/tomas2p/tomas2p.github.io/master/static/favicon_io/favicon.ico"
-  text: w
-
 minify:
   disableXML: true
   # minifyOutput: true
@@ -23,6 +19,9 @@ minify:
 params:
   defaultTheme: auto
   disableThemeToggle: false
+  
+  assets:
+    favicon: "/favicon_io/favicon.ico"
   
   # profileMode:
   #   enabled: true
@@ -39,11 +38,15 @@ params:
 
   homeInfoParams:
     Title: Portfolio
-    Content: Estudio Ingeniería Informática, también me interesan los cortometrajes.
+    Content: "Estudio Ingeniería Informática, también me interesan los cortometrajes."
+
+  mainSections:
+    - proyects
+    - blog
 
   socialIcons:
-    - name: "<platform>"
-      url: "<link>"
+    - name: "Instagram"
+      url: "https://instagram.com/tomas2p11"
     - name: Github
       url: "https://github.com/tomas2p"
 
@@ -54,20 +57,20 @@ outputs:
     - JSON # is necessary
 
 menu:
-    main:
-        - identifier: proyects
-          name: Proyectos
-          url: /proyects
-          weight: 10
-        - identifier: blog
-          name: Blog
-          url: /blog
-          weight: 20
-        - identifier: archive
-          name: Archivo
-          url: /archive
-          weight: 30
-        - identifier: search
-          name: Buscar
-          url: /search
-          weight: 40
+  main:
+    - identifier: proyects
+      name: Proyectos
+      url: /proyects
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog
+      weight: 20
+    - identifier: search
+      name: Buscar
+      url: /search
+      weight: 30
+    - identifier: archive
+      name: Archivo
+      url: /archive
+      weight: 40
