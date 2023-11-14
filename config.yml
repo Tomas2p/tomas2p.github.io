@@ -1,14 +1,73 @@
+baseURL: "https://tomas2p.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+title: Tomas2p
+paginate: 5
+theme: PaperMod
 
-baseURL: "https://yoursite.example.com/"
-title: "My Hugo Site"
-footnoteReturnLinkContents: "↩"
-permalinks:
-  post: /:year/:month/:title/
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+# googleAnalytics: UA-123-45
+
+assets:
+  favicon: "https://avatars.githubusercontent.com/u/91573621?v=4"
+  text: w
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
 params:
-  Subtitle: "Hugo is Absurdly Fast!"
-  AuthorName: "Jon Doe"
-  GitHubUser: "spf13"
-  ListOfFoo:
-    - "foo1"
-    - "foo2"
-  SidebarRecentLimit: 5
+  defaultTheme: auto
+  disableThemeToggle: false
+  
+  # profileMode:
+  #   enabled: true
+  #   subtitle: "Portfolio"
+  #   imageUrl: "https://avatars.githubusercontent.com/u/91573621?v=4" # optional
+  #   imageTitle: "<title of image as alt>" # optional
+  #   # imageWidth: 200 # custom size
+  #   # imageHeight: 200 # custom size
+  #   buttons:
+  #     - name: Proyectos
+  #       url: /proyects
+  #     - name: Blog
+  #       url: /blog
+
+  homeInfoParams:
+    Title: Portfolio
+    Content: Estudio Ingeniería Informática, también me interesan los cortometrajes.
+
+  socialIcons:
+    - name: "<platform>"
+      url: "<link>"
+    - name: Github
+      url: "https://github.com/tomas2p"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
+
+menu:
+    main:
+        - identifier: proyects
+          name: Proyectos
+          url: /proyects
+          weight: 10
+        - identifier: blog
+          name: Blog
+          url: /blog
+          weight: 20
+        - identifier: archive
+          name: Archivo
+          url: /archive
+          weight: 30
+        - identifier: search
+          name: Buscar
+          url: /search
+          weight: 40
