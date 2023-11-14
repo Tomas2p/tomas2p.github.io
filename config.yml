@@ -13,7 +13,7 @@ pygmentsUseClasses: true
 # googleAnalytics: UA-123-45
 
 assets:
-  favicon: "https://avatars.githubusercontent.com/u/91573621?v=4"
+  favicon: "https://raw.githubusercontent.com/tomas2p/tomas2p.github.io/master/static/favicon_io/favicon.ico"
   text: w
 
 minify:
