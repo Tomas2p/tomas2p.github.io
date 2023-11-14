@@ -76,7 +76,7 @@ outputs:
 
 menu:
   main:
-    - identifier: proyects
+    - identifier: proyectos
       name: Proyectos
       url: /proyects
       weight: 1
@@ -84,15 +84,15 @@ menu:
     #   name: Archivo
     #   url: /archive
     #   weight: 15
-    - identifier: blog
+    - identifier: artículos
       name: Blog
       url: /blog
       weight: 2
-    - identifier: tags
+    - identifier: etiquetas
       name: Etiquetas
       url: /tags
       weight: 3
-    - identifier: search
+    - identifier: buscar
       name: Buscar
       url: /search
       weight: 4
