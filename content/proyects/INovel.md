@@ -1,5 +1,12 @@
+---
+title: "INovel++"
+date: "17-11-2023"
+description: "Novelas interactivas en C++"
+tags:
+  - C++
+---
 
-# Inovel
+# INovel++
 
 Novelas interactivas, en una pagina web para que todo el mundo pueda jugar con ellas y crearlas.
 
