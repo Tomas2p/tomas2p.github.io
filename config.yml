@@ -36,6 +36,7 @@ params:
   EnableImageZoom: true
   ShowShareButtons: true
   ShowAuthor: true
+  ShowDraft: true
   ShowWordCount: true
   ShowReadingTime: true
   ShowPostNavLinks: true
@@ -69,10 +70,12 @@ params:
 
 menu:
   main:
-    - name: Proyectos
+    - identifier: proyects
+      name: Proyectos
       url: /proyects
       weight: 1
-    - name: Etiquetas
+    - identifier: tags
+      name: Etiquetas
       url: /tags
       weight: 2
 
