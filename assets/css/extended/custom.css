@@ -1,0 +1,28 @@
+:root {
+  --brand-color: rgb(184, 134, 11);
+  --theme: rgb(255, 255, 255);
+  --entry: rgb(214, 214, 214);
+  --border: var(--theme);
+  --link-background-color: rgba(184, 134, 11, 0.573);
+  --link-color: var(--primary);
+  --link-hover-color: var(--brand-color);
+  --link-underline-shadow: 0 1px 0 var(--link-color);
+  --link-hover-underline-color: var(--brand-color);
+  --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
+  --signature: var(--brand-color);
+  --signature-bg: var(--brand-color);
+}
+
+.dark {
+  --theme: rgb(7, 8, 10);
+  --entry: rgb(41, 41, 41);
+  --border: var(--theme);
+  --code-bg: var(--entry);
+  --tertiary-bg: var(--entry);
+  --link-background-color: rgba(184, 134, 11, 0.427);
+  --link-color: var(--primary);
+  --link-hover-color: var(--brand-color);
+  --link-underline-shadow: 0 1px 0 var(--link-color);
+  --link-hover-underline-color: var(--link-hover-color);
+  --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
+}

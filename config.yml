@@ -1,7 +1,7 @@
-# baseURL: "https://tomas2p.github.io/" # if your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+baseURL: "https://tomas2p.github.io/"
 title: Tomas2p
 paginate: 5
-theme: "PaperMod"
+theme: PaperModX
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
@@ -9,62 +9,72 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 enableEmoji: true
-pygmentsUseClasses: true
-# googleAnalytics: UA-123-45
-
-minify:
-  disableXML: true
-  # minifyOutput: true
 
 params:
-  env: production
-  author: Tomás Pino Pérez
+  # env: production
+  author: Tomas2p
+  description: "Portfolio de Tomas2p"
+  mainSections:
+    - proyects
+  favicon: /logo/1f3b4.ico
+  DateFormat: "2006-01-02"
+  useCustomAnalytics: true
+  disableAnchoredHeadings: true
+  disableScrollToTop: false
+  logo:
+    text: "Tomas2p"
+    # La siguiente linea esta rara no sirve, hay que cambiar icon en la línea 94 de themes/PaperModX/layouts/partials/header.html
+    icon: "https://images.emojiterra.com/google/android-11/512px/1f3b4.png"
+
+  # Theme Params
   defaultTheme: auto
   # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
+  DisableLanguageSwitch: true
   # disableSpecial1stPost: true
-  displayFullLangName: true
+  TocOpen: true
+  TocSide: right
+  EnableInstantClick: true
+  EnableImageZoom: true
+  ShowShareButtons: true
+  ShowWordCount: true
+  ShowReadingTime: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowToc: true
-  # comments: false
+  ShowFullTextinRSS: false
+  ShowRssButtonInSectionTermList: false
+  comments: false
 
-  assets:
-    favicon: "/favicon_io/favicon.ico"
+  socialIcons:
+    - name: instagram
+      url: "https://instagram.com/tomas2p11"
+    - name: youtube-simple
+      url: "https://www.youtube.com/@tomas2p11"
+    - name: github-simple
+      url: "https://github.com/tomas2p"
 
   profileMode:
     enabled: true
     title: Tomás Pino Pérez
-    subtitle:
-      "Ingeniero en formación, apasionado por la programación y la narrativa visual.
-      Equilibrando líneas de código con guiones de cortometrajes. 💻🎞️"
+    subtitle: >
+      Ingeniero en formación, apasionado por la programación y la narrativa visual.
+      Equilibrando líneas de código con guiones de cortometrajes. 💻🎞️
     imageUrl: "https://avatars.githubusercontent.com/u/91573621?v=4" # optional
-    imageTitle: "<title of image as alt>" # optional
+    imageTitle: "Imagen de perfil de Toms2p" # optional
     # imageWidth: 200 # custom size
     # imageHeight: 200 # custom size
     buttons:
       - name: Proyectos
         url: /proyects
 
-  #   homeInfoParams:
-  #     Title: Portfolio
-  #     Content: "Ingeniero en formación, apasionado por la programación y la narrativa visual.
-  #     Equilibrando líneas de código con guiones de cortometrajes. 💻🎞️"
-  #
-  #   mainSections:
-  #     - proyects
-  #     - blog
-
-  socialIcons:
-    - name: Instagram
-      url: "https://instagram.com/tomas2p11"
-    - name: Youtube
-      url: "https://www.youtube.com/@tomas2p11"
-    - name: Github
-      url: "https://github.com/tomas2p"
+menu:
+  main:
+    - name: Proyectos
+      url: /proyects/
+      weight: 1
+    - name: Etiquetas
+      url: /tags/
+      weight: 2
 
 outputs:
   home:
@@ -72,25 +82,35 @@ outputs:
     - RSS
     - JSON # is necessary
 
-menu:
-  main:
-    - identifier: proyectos
-      name: Proyectos
-      url: /proyects
-      weight: 1
-    # - identifier: archive
-    #   name: Archivo
-    #   url: /archive
-    #   weight: 15
-    # - identifier: artículos
-    #   name: Blog
-    #   url: /blog
-    #   weight: 2
-    - identifier: etiquetas
-      name: Etiquetas
-      url: /tags
-      weight: 3
-    # - identifier: buscar
-    #   name: Buscar
-    #   url: /search
-    #   weight: 4
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: dracula
+    lineNos: false
+    noClasses: false
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+
+  instagram:
+    disabled: false
+    simple: true
+
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true

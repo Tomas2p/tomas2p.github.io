@@ -1,74 +1,49 @@
 ---
 title: "INovel++"
-date: 2023-11-17T11:00:00+00:00
-# weight: 1
-# aliases: ["/c++"]
-tags: ["c++"]
-author: "Me"
-# author: ["Me", "You"] # multiple authors
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
+date: "2023-11-17"
 description: "Novela interactiva por terminal implementado en C++ y haciendo uso de txt para la creación de historias."
-canonicalURL: "https://canonical.url/to/page"
-disableHLJS: true # to disable highlightjs
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-ShowWordCount: true
-ShowRssButtonInSectionTermList: true
-UseHugoToc: true
-cover:
-    image: "<image path/url>" # image path/url
-    alt: "<alt text>" # alt text
-    caption: "<text>" # display caption under cover
-    relative: false # when using page bundles set this to true
-    hidden: true # only hide on current single page
-editPost:
-    URL: "https://github.com/tomas2p/tomas2p.github.io/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+tags:
+  - C++
+  - Code
+  - Game
+ShowToc: true
 ---
+
+`Link del repositorio` [https://github.com/tomas2p/inovel-game](https://github.com/tomas2p/inovel-game)
 
 ## Constructor
 
 Requisitos: `make` y `g++`
 
-    $ make
+```bash
+$ make
     rm -f story
     g++ -std=c++17 -Wall -o  story src/story.cpp src/main.cpp
+```
+
+---
 
 ## Ejemplo de ejecución
 
-    $ ./story stories
+```bash
+$ ./story stories
     * INovel++ novela interactiva *
-
-    Hay 1 historias disponibles en stories/:
-    
-     [1] - story_template
-
+    Hay 1 historias disponibles en stories/:   
+        [1] - story_template
     Seleccione la historia a jugar >>> 1
-    
+
     * La Carga del Móvil : Escena [1-3] *
-
-    drgybmcw
-
-    Necesitas cargar el móvil con el cargador.
-    
-     [1] - Coger el cargador de tu cuarto.
-     [2] - Jugar al minecraft.
-
+    adwdfsdd
+    Necesitas cargar el móvil con el cargador. 
+        [1] - Coger el cargador de tu cuarto.
+        [2] - Jugar al minecraft.
     Elige una opción [1-2] >>> 1
 
     Gracias a alguien tu móvil no ha explotado o si.
-
     Presiona Enter para continuar...
+```
+
+---
 
 ## Plantilla de historia
 
@@ -114,6 +89,8 @@ Donde las cosas funcionan de la siguiente manera:
 
 Las lineas vacias y los comentarios son ignorados, los '.' sirven para separar el texto de las abreviaturas.
 
+---
+
 ### PixelArt NO FUNCIONAL
 
 Actualmente no funcionan los colores.
@@ -130,6 +107,8 @@ Para el pixelart comentado anteriormente con la opción 'A' tienes diponibles lo
 |      m      |  magenta/purple  |
 |      c      |       cyan       |
 |      w      |   blanco/white   |
+
+---
 
 ### Ejecución con pixelart
 
