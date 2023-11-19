@@ -14,11 +14,10 @@ params:
   # env: production
   author: Tomas2p
   description: "Portfolio de Tomas2p"
-  mainSections:
-    - proyects
+  # mainSections: proyects
   favicon: /logo/1f3b4.ico
   DateFormat: "2006-01-02"
-  useCustomAnalytics: true
+  useCustomAnalytics: false
   disableAnchoredHeadings: true
   disableScrollToTop: false
   logo:
@@ -36,6 +35,7 @@ params:
   EnableInstantClick: true
   EnableImageZoom: true
   ShowShareButtons: true
+  ShowAuthor: true
   ShowWordCount: true
   ShowReadingTime: true
   ShowPostNavLinks: true
@@ -70,10 +70,10 @@ params:
 menu:
   main:
     - name: Proyectos
-      url: /proyects/
+      url: /proyects
       weight: 1
     - name: Etiquetas
-      url: /tags/
+      url: /tags
       weight: 2
 
 outputs:
