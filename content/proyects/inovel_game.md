@@ -1,6 +1,6 @@
 ---
 title: "INovel++"
-date: "2023-11-17"
+date: "2023-05-18"
 description: "Novela interactiva por terminal implementado en C++ y haciendo uso de txt para la creación de historias."
 tags:
   - C++
@@ -9,7 +9,6 @@ ShowToc: true
 ---
 
 `Repo:` [github.com/tomas2p/inovel-game](https://github.com/tomas2p/inovel-game)
-
 
 ## Constructor
 
