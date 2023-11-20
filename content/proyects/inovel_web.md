@@ -5,11 +5,11 @@ description: "Novela interactiva implementadas en la web."
 tags:
   - HTML
   - Game
+links:
+  - Github: "https://github.com/tomas2p/inovel"
+  - Website: "https://tomas2p.github.io/inovel/"
 ShowToc: true
 ---
-
-`Repo:` [github.com/tomas2p/inovel](https://github.com/tomas2p/inovel)
-`Web:` [tomas2p.github.io/inovel/](https://tomas2p.github.io/inovel/)
 
 ## Resumen
 

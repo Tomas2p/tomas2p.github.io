@@ -74,10 +74,10 @@ menu:
       name: Proyectos
       url: /proyects
       weight: 1
-    # - identifier: tags
-    #   name: Etiquetas
-    #   url: /tags
-    #   weight: 2
+    - identifier: tags
+      name: "#"
+      url: /tags
+      weight: 2
 
 outputs:
   home:

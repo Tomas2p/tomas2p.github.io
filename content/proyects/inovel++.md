@@ -5,10 +5,10 @@ description: "Novela interactiva por terminal implementado en C++ y haciendo uso
 tags:
   - C++
   - Game
+links:
+  - Github: https://github.com/tomas2p/inovel-game
 ShowToc: true
 ---
-
-`Repo:` [github.com/tomas2p/inovel-game](https://github.com/tomas2p/inovel-game)
 
 ## Constructor
 

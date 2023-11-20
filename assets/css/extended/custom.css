@@ -26,3 +26,23 @@
   --link-hover-underline-color: var(--link-hover-color);
   --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
 }
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: calc(var(--nav-width) + var(--gap) * 2);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  line-height: var(--header-height);
+}
+
+.meta-item .post-links a:not(:last-of-type) {
+  margin-inline-end: .3em;
+}
+.meta-item .post-links a:not(:last-of-type):after {
+  content: ",";
+}
+/* .meta-item .post-links a:before {
+  content: "/";
+} */
