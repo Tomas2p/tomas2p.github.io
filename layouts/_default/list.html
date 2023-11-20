@@ -7,17 +7,19 @@
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
-  <h1>
-    {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
-    {{- if eq .Kind "term" -}}#{{ end -}}
-    {{ .Title -}}
-  </h1>
+  <div class="page-title-links">
+    <h1>
+      {{/* see: https://gohugo.io/variables/taxonomy/#taxonomy-terms-page-variables */}}
+      {{- if eq .Kind "term" -}}#{{ end -}}
+      {{ .Title -}}
+    </h1>
+    {{- partial "inline_links.html" . -}}
+  </div>
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
   </div>
   {{- end }}
-  {{- partial "inline_links.html" . -}}
 </header>
 {{- end }}
 

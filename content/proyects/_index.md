@@ -1,3 +1,4 @@
 ---
 title: Proyectos
+ShowRSS: true
 ---

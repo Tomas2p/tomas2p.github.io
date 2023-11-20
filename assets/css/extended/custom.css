@@ -27,7 +27,7 @@
   --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
 }
 
-.page-header {
+.page-title-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -40,9 +40,103 @@
 .meta-item .post-links a:not(:last-of-type) {
   margin-inline-end: .3em;
 }
+
 .meta-item .post-links a:not(:last-of-type):after {
   content: ",";
 }
+
 /* .meta-item .post-links a:before {
   content: "/";
 } */
+
+ul {
+  padding: 0;
+}
+
+.terms-tags li {
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: none;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  top: 0;
+  left: 0;
+  background-color: var(--theme);
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+  /* Display block instead of inline */
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+#menu a {
+  font-size: 18px;
+  color: var(--primary);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 44px;
+}
+
+#hamburger-btn {
+  font-size: 18px;
+  display: none;
+  margin: 0px 24px;
+  color: var(--primary);
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media only screen and (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  /* Mostrar el botón de hamburguesa en pantallas pequeñas */
+  #hamburger-btn {
+    display: inline;
+  }
+}

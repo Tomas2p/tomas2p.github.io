@@ -66,6 +66,18 @@ function toggleThemeListener() {
     switchTheme(theme);
   })();
 </script>
+<script>
+/* Open */
+function openNav() {
+  document.getElementById("myNav").style.display = "block";
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.display = "none";
+}
+</script>
+
 
 <header class="header">
     <nav class="nav">
@@ -124,11 +136,38 @@ function toggleThemeListener() {
             </span>
         </div>
         {{- $currentPage := . }}
-        <ul id="menu">
+        <!-- Menu pantallas pequeñas -->
+        <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- Overlay content -->
+          <div class="overlay-content">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
             {{- $page_url:= $currentPage.Permalink }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+                  <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                  {{- if $is_search -}}data-no-instant{{- end -}}
+                  {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
+                  {{- if strings.HasPrefix $page_url $menu_item_url }} class="active" {{- end }}
+                  {{- if .Params.External }} target="_blank" {{- end }}
+                  >
+                      {{- .Pre }}
+                      {{- .Name -}}
+                      {{ .Post -}}
+                      {{- if .Params.External }}<span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>{{- end }}
+                  </a>
+              {{- end }}
+          </div>
+        </div>
+        <!-- Use any element to open/show the overlay navigation menu -->
+        <span id="hamburger-btn" onclick="openNav()">&#9776; Menú</span>  
+        <!-- Menu pantallas grande -->
+        <ul id="menu">
+          {{- range site.Menus.main }}
+          {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
+          {{- $page_url:= $currentPage.Permalink }}
+          {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- if $is_search -}}data-no-instant{{- end -}}

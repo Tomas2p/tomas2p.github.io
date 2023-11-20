@@ -75,9 +75,13 @@ menu:
       url: /proyects
       weight: 1
     - identifier: tags
-      name: "#"
+      name: Etiquetas
       url: /tags
       weight: 2
+    # - identifier: inovel
+    #   name: INovel
+    #   url: /inovel
+    #   weight: 2
 
 outputs:
   home:
