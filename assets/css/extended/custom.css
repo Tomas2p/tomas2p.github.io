@@ -104,13 +104,13 @@ ul {
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 5px;
-  right: 25px;
-  font-size: 44px;
+  top: -8px;
+  right: 15px;
+  font-size: 40px;
 }
 
 #hamburger-btn {
-  font-size: 18px;
+  font-size: 24px;
   display: none;
   margin: 0px 24px;
   color: var(--primary);
