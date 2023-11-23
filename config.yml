@@ -61,26 +61,44 @@ params:
       Ingeniero en formación, apasionado por la programación y la narrativa visual.
       Equilibrando líneas de código con guiones de cortometrajes. 💻🎞️
     imageUrl: "https://avatars.githubusercontent.com/u/91573621?v=4" # optional
-    imageTitle: "Imagen de perfil de Toms2p" # optional
+    imageTitle: "Imagen de perfil de Tomas2p" # optional
     # imageWidth: 200 # custom size
     # imageHeight: 200 # custom size
     buttons:
-      - name: Proyectos
+      - identifier: proyects
+        name: Proyectos
         url: /proyects
-      - name: INovel
+      - identifier: inovel
+        name: INovel
         url: /inovel
 
 menu:
   main:
-    - name: Proyectos
+    - identifier: proyects
+      name: Proyectos
       url: /proyects
       weight: 1
-    - name: INovel
+    - identifier: inovel
+      name: INovel
       url: /inovel
       weight: 2
-    - name: Etiquetas
+    - identifier: tags
+      name: Etiquetas
       url: /tags
-      weight: 
+      weight: 3
+
+defaultContentLanguage: es
+languages:
+  es:
+    languageCode: es
+    languageName: ":es:"
+    contentDir: content/es
+    weight: 1
+  en:
+    languageCode: en
+    languageName: ":uk:"
+    contentDir: content/en
+    weight: 2
 
 outputs:
   home:

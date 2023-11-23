@@ -183,6 +183,29 @@ window.addEventListener('load', inovelStory());
                     </svg>
                 </button>
                 {{- end }}
+
+                {{- $lang := .Lang}}
+                {{- $separator := or $label_text (not .Site.Params.disableThemeToggle)}}
+                {{- with $.Site.Home.AllTranslations }}
+                <ul class="lang-switch">
+                    {{- if $separator }}<li>|</li>{{ end }}
+                    {{- range . -}}
+                    {{- if ne $lang .Lang }}
+                    <li>
+                        <a href="{{- .Permalink -}}" title="{{ .Language.Params.languageAltTitle | default (.Language.LanguageName | emojify) | default (.Lang | title) }}"
+                            aria-label="{{ .Language.LanguageName | default (.Lang | title) }}">
+                            <!-- {{- if (and $.Site.Params.displayFullLangName (.Language.LanguageName)) }}
+                            {{- .Language.LanguageName | emojify -}}
+                            {{- else }}
+                            {{- .Lang | title -}}
+                            {{- end -}} -->
+                            {{ .Language.LanguageName | emojify }}
+                        </a>
+                    </li>
+                    {{- end -}}
+                    {{- end}}
+                </ul>
+                {{- end }}
             </span>
         </div>
         {{- $currentPage := . }}
@@ -196,14 +219,14 @@ window.addEventListener('load', inovelStory());
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
             {{- $page_url:= $currentPage.Permalink }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
-                  <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                  <a href="{{ $menu_item_url }}" title="{{ or (T .Identifier) .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                   {{- if $is_search -}}data-no-instant{{- end -}}
                   {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
                   {{- if strings.HasPrefix $page_url $menu_item_url }} class="active" {{- end }}
                   {{- if .Params.External }} target="_blank" {{- end }}
                   >
                       {{- .Pre }}
-                      {{- .Name -}}
+                      {{- or (T .Identifier) .Name | default .Name -}}
                       {{ .Post -}}
                       {{- if .Params.External }}<span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>{{- end }}
                   </a>
@@ -219,14 +242,14 @@ window.addEventListener('load', inovelStory());
           {{- $page_url:= $currentPage.Permalink }}
           {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
-                <a href="{{ $menu_item_url }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
+                <a href="{{ $menu_item_url }}" title="{{ or (T .Identifier) .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                 {{- if $is_search -}}data-no-instant{{- end -}}
                 {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" | safeHTMLAttr ) }}
                 {{- if strings.HasPrefix $page_url $menu_item_url }} class="active" {{- end }}
                 {{- if .Params.External }} target="_blank" {{- end }}
                 >
                     {{- .Pre }}
-                    {{- .Name -}}
+                    {{- or (T .Identifier) .Name | default .Name -}}
                     {{ .Post -}}
                     {{- if .Params.External }}<span class="external-link">{{ safeHTML (index $.Site.Data.svg "external-link") }}</span>{{- end }}
                 </a>

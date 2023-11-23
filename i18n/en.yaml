@@ -39,3 +39,12 @@
 
 - id: comments
   translation: "Comments"
+
+- id: proyects
+  translation: Proyects
+
+- id: inovel
+  translation: INovel
+
+- id: tags
+  translation: Tags
