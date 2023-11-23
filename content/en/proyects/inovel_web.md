@@ -1,52 +1,52 @@
 ---
 title: "INovel Web"
 date: "2023-10-19"
-description: "Novela interactiva implementadas en la web."
+description: "Interactive novels implemented on the web."
 tags:
   - HTML
   - Game
 links:
   - Github: "https://github.com/tomas2p/inovel"
-  - Website: "https://tomas2p.github.io/inovel/"
+  - Web: "https://tomas2p.github.io/inovel/"
 ShowToc: true
 ---
 
 ---
 
-## Resumen
+## Summary
 
-Es una reimplementación  en web de la [versión para terminal hecha en C++](/proyects/inovel_game/) con la idea en mente de la facilitar el usua al usuario al no usar terminales.
+It's a web-based reimplementation of the [terminal version made in C++](/proyects/inovel_game/) with the aim of making it easier for the user by eliminating the need for terminals.
 
-`Estado actual: Pruebas` todavía las historias no estan disponibles, ya que no se como implementar estas y no he tenido tiempo, por ahora tengo dos ideas, siendo la primera lo más parecido a la version de C++ pero usando YAML o JSON y la segunda que consiste en hacer las historias en un PowerPoint y integrar este con la web.
+`Current Status: Testing` - stories are still not available as I haven't figured out how to implement them yet due to time constraints. At the moment, I have two ideas: the first one is to create something similar to the C++ version but using YAML or JSON, and the second involves creating stories in a PowerPoint and integrating it with the web.
 
 ---
 
-## Historial de versiones
+## Version History
 
-| Versión | Fecha      | Cambios                        |
+| Version | Date       | Changes                        |
 | ------- | ---------- | ------------------------------ |
-| v0.0    | 17-08-2023 | - Idea                         |
-| v0.1    | 21-08-2023 | - Muchos JS                    |
-| v0.2    | 27-08-2023 | - Funcion basica de html y css |
-| v0.3    | 01-09-2023 | - JS y json funciona           |
-| v0.5    | 09-10-2023 | - Mejor html, css y js         |
-| v0.6    | 19-10-2023 | - Orden y colores              |
+| v0.0    | 08-17-2023 | - Idea                         |
+| v0.1    | 08-21-2023 | - Lots of JS                   |
+| v0.2    | 08-27-2023 | - Basic HTML and CSS function  |
+| v0.3    | 09-01-2023 | - JS and JSON work             |
+| v0.5    | 10-09-2023 | - Improved HTML, CSS, and JS   |
+| v0.6    | 10-19-2023 | - Ordering and colors          |
 
 ---
 
-## Ya implementado
+## Already Implemented
 
 - [x] Gallery display
 - [x] Cards per story with title, description, image, and status
 - [x] 4 styles of layout to display the stories
-- [x] json stories  interpreter
+- [x] JSON stories interpreter
 
 ---
 
 ## ToDo
 
-- [ ] yaml support
-- [ ] story.html rework because its broken
+- [ ] YAML support
+- [ ] Rework story.html because it's broken
 - [ ] Redirect to personal page
 - [ ] Filter search of stories on home
 - [ ] Multiple language support
@@ -54,8 +54,8 @@ Es una reimplementación  en web de la [versión para terminal hecha en C++](/pr
 
 ---
 
-## Imagenes
+## Images
 
-![Imagen de la web INovel](https://github.com/tomas2p/inovel/blob/main/image.png?raw=true)
+![Image of INovel Web](https://github.com/tomas2p/inovel/blob/main/image.png?raw=true)
 
 ---

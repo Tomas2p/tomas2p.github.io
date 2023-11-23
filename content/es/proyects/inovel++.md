@@ -82,10 +82,10 @@ Donde las cosas funcionan de la siguiente manera:
 |   En TXT    |        En TXT         |   En ART    |       En ART        |
 | :---------: | :-------------------: | :---------: | :-----------------: |
 | Abreviatura |      Explicación      | Abreviatura |     Explicación     |
-|      T      | Título de la historia |      #      |     Comentarios     |
-|      E      |        Escena         |      A      | nombre del pixelart |
-|      #      |      Comentario       |
-|      A      |  Titulo del pixelart  |
+|      #      |      Comentario       |      #      |     Comentarios     |
+|      A      |  Titulo del pixelart  |      A      | nombre del pixelart |
+|      T      | Título de la historia |
+|      E      |        Escena         |
 |      +      |    Avanza 1 escena    |
 |     +n      |   Avanza n escenas    |
 |      -      |  Retrocede 1 escena   |

@@ -1,7 +1,7 @@
 ---
 title: "INovel++"
 date: "2023-05-18"
-description: "Novela interactiva por terminal implementado en C++ y haciendo uso de txt para la creación de historias."
+description: "Interactive novel by terminal implemented in C++ and using text files for story creation."
 tags:
   - C++
   - Game
@@ -14,7 +14,7 @@ ShowToc: true
 
 ## Constructor
 
-Requisitos: `make` y `g++`
+Requirements: `make` and `g++`
 
 ```bash
 $ make
@@ -24,112 +24,112 @@ $ make
 
 ---
 
-## Ejemplo de ejecución
+## Execution Example
 
 ```bash
 $ ./story stories
-    * INovel++ novela interactiva *
-    Hay 1 historias disponibles en stories/:   
+    * INovel++ interactive novel *
+    There are 1 story available in stories/:   
         [1] - story_template
-    Seleccione la historia a jugar >>> 1
+    Select the story to play >>> 1
 
-    * La Carga del Móvil : Escena [1-3] *
+    * Mobile Charging : Scene [1-3] *
     adwdfsdd
-    Necesitas cargar el móvil con el cargador. 
-        [1] - Coger el cargador de tu cuarto.
-        [2] - Jugar al minecraft.
-    Elige una opción [1-2] >>> 1
+    You need to charge the mobile phone with the charger.
+        [1] - Take the charger from your room.
+        [2] - Play Minecraft.
+    Choose an option [1-2] >>> 1
 
-    Gracias a alguien tu móvil no ha explotado o si.
-    Presiona Enter para continuar...
+    Thanks to someone, your phone hasn't exploded... yet.
+    Press Enter to continue...
 ```
 
 ---
 
-## Plantilla de historia
+## Story Template
 
-Con el objetivo en mente de que las historias puedan ser creadas por otros usuarios les ofrezco la plantilla que se encuentra en stories/template/story_template.txt y su pixelart se encontraría en stories/template/story_template.art:
-
-```
-T.Título de la Historia
-
-E.Texto escena 1
-#Comentario
-A.Escena1
-+.Avanza 1 escena
--.Retrocede 1 escena
-+2.Avanza 2 escenas
--2.Retrocede 2 escenas
-
-F.Final de la historia
-```
-
-Y este sería el archivo del pixelart:
+With the aim of enabling stories to be created by other users, I offer the template found at stories/template/story_template.txt and its pixel art at stories/template/story_template.art:
 
 ```
-#PixelArt de la historia
+T.Story Title
 
-A.Escena1
+E.Scene text 1
+#Comment
+A.Scene1
++.Advance 1 scene
+-.Go back 1 scene
++2.Advance 2 scenes
+-2.Go back 2 scenes
+
+F.End of the story
+```
+
+And this would be the pixel art file:
+
+```
+#PixelArt of the story
+
+A.Scene1
 adwdfsdd
 qwdqwdqw
 dqwdwddw
 
-A.Escena2
+A.Scene2
 ```
 
-Donde las cosas funcionan de la siguiente manera:
+Where things work as follows:
 
-|   En TXT    |        En TXT         |   En ART    |       En ART        |
-| :---------: | :-------------------: | :---------: | :-----------------: |
-| Abreviatura |      Explicación      | Abreviatura |     Explicación     |
-|      T      | Título de la historia |      #      |     Comentarios     |
-|      E      |        Escena         |      A      | nombre del pixelart |
-|      #      |      Comentario       |
-|      A      |  Titulo del pixelart  |
-|      +      |    Avanza 1 escena    |
-|     +n      |   Avanza n escenas    |
-|      -      |  Retrocede 1 escena   |
-|     -n      |  Retrocede n escenas  |
-|      F      | Final de la historia  |
+|    In TXT    |      In TXT      |    In ART    |     In ART     |
+| :----------: | :--------------: | :----------: | :------------: |
+| Abbreviation |   Explanation    | Abbreviation |  Explanation   |
+|      #       |     Comment      |      #       |    Comments    |
+|      A       | Pixel art title  |      A       | Pixel art name |
+|      T       |   Story title    |
+|      E       |      Scene       |
+|      +       | Advance 1 scene  |
+|      +n      | Advance n scenes |
+|      -       | Go back 1 scene  |
+|      -n      | Go back n scenes |
+|      F       | End of the story |
 
-Las lineas vacias y los comentarios son ignorados, los '.' sirven para separar el texto de las abreviaturas.
+Empty lines and comments are ignored, '.' is used to separate text from abbreviations.
 
 ---
 
-### PixelArt NO FUNCIONAL
+### Non-functional PixelArt
 
-Actualmente no funcionan los colores.
+Currently, colors don't work.
 
-Para el pixelart comentado anteriormente con la opción 'A' tienes diponibles los siguientes colores en formato ANSI, si no los puedes ver quizás esa terminal no sea compatible.
+For the pixel art mentioned earlier with the 'A' option, you have the following colors available in ANSI format. If you can't see them, your terminal might not support them.
 
-| Abreviatura |      Color       |
-| :---------: | :--------------: |
-|      d      | negro/dark/black |
-|      r      |     rojo/red     |
-|      g      |   verde/green    |
-|      y      | amarillo/yellow  |
-|      b      |    azul/blue     |
-|      m      |  magenta/purple  |
-|      c      |       cyan       |
-|      w      |   blanco/white   |
+| Abbreviation |     Color      |
+| :----------: | :------------: |
+|      d       |   dark/black   |
+|      r       |      red       |
+|      g       |     green      |
+|      y       |     yellow     |
+|      b       |      blue      |
+|      m       | magenta/purple |
+|      c       |      cyan      |
+|      w       |     white      |
 
 ---
 
-### Ejecución con pixelart
+### Execution with PixelArt
 
-El cargar_el_movil.txt de esa escena es el siguiente:
-
-```
-E.Necesitas cargar el móvil con el cargador.
-A.Escena1
-+.Coger el cargador.
--.Jugar al minecraft.
-```
-
-El cargar_el_movil.art de esa escena es:
+The cargar_el_movil.txt for that scene is as follows:
 
 ```
-A.Escena1
+E.You need to charge the mobile phone with the charger.
+A.Scene1
++.Take the charger.
+-.Play Minecraft.
+```
+
+The cargar_el_movil.art for that scene is:
+
+```
+A.Scene1
 wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 ww                                 ww
 ww    ccc                          ww
@@ -138,10 +138,10 @@ ww    c c         www        wwwwwwww
 wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 ```
 
-Y se vería lo siguiente:
+And it would appear as:
 
 ```
-* La Carga del Móvil : Escena [1-3] *
+* Mobile Charging : Scene [1-3] *
 
  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
  ww                                 ww
@@ -150,10 +150,10 @@ Y se vería lo siguiente:
  ww    c c         www        wwwwwwww
  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
-Necesitas cargar el móvil con el cargador.
- [1] - Coger el cargador.
- [2] - Jugar al minecraft.
-Elige una opción [1-2] >>> 
+You need to charge the mobile phone with the charger.
+ [1] - Take the charger.
+ [2] - Play Minecraft.
+Choose an option [1-2] >>> 
 ```
 
 ---

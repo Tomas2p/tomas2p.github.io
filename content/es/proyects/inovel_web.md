@@ -7,7 +7,7 @@ tags:
   - Game
 links:
   - Github: "https://github.com/tomas2p/inovel"
-  - Website: "https://tomas2p.github.io/inovel/"
+  - Web: "https://tomas2p.github.io/inovel/"
 ShowToc: true
 ---
 

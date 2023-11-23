@@ -238,8 +238,8 @@ window.addEventListener('load', inovelStory());
         <!-- Menu pantallas grande -->
         <ul id="menu">
           {{- range site.Menus.main }}
-          {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
-          {{- $page_url:= $currentPage.Permalink }}
+          {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absLangURL }}
+          {{- $page_url:= $currentPage.Permalink | absLangURL }}
           {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
             <li>
                 <a href="{{ $menu_item_url }}" title="{{ or (T .Identifier) .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
