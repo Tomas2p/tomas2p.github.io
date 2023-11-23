@@ -67,21 +67,20 @@ params:
     buttons:
       - name: Proyectos
         url: /proyects
+      - name: INovel
+        url: /inovel
 
 menu:
   main:
-    - identifier: proyects
-      name: Proyectos
+    - name: Proyectos
       url: /proyects
       weight: 1
-    - identifier: tags
-      name: Etiquetas
-      url: /tags
+    - name: INovel
+      url: /inovel
       weight: 2
-    # - identifier: inovel
-    #   name: INovel
-    #   url: /inovel
-    #   weight: 2
+    - name: Etiquetas
+      url: /tags
+      weight: 
 
 outputs:
   home:

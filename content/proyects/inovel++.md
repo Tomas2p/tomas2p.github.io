@@ -10,6 +10,8 @@ links:
 ShowToc: true
 ---
 
+---
+
 ## Constructor
 
 Requisitos: `make` y `g++`
@@ -48,28 +50,32 @@ $ ./story stories
 
 Con el objetivo en mente de que las historias puedan ser creadas por otros usuarios les ofrezco la plantilla que se encuentra en stories/template/story_template.txt y su pixelart se encontraría en stories/template/story_template.art:
 
-    T.Título de la Historia
+```
+T.Título de la Historia
 
-    E.Texto escena 1
-    #Comentario
-    A.Escena1
-    +.Avanza 1 escena
-    -.Retrocede 1 escena
-    +2.Avanza 2 escenas
-    -2.Retrocede 2 escenas
+E.Texto escena 1
+#Comentario
+A.Escena1
++.Avanza 1 escena
+-.Retrocede 1 escena
++2.Avanza 2 escenas
+-2.Retrocede 2 escenas
 
-    F.Final de la historia
+F.Final de la historia
+```
 
 Y este sería el archivo del pixelart:
 
-    #PixelArt de la historia
+```
+#PixelArt de la historia
 
-    A.Escena1
-    adwdfsdd
-    qwdqwdqw
-    dqwdwddw
+A.Escena1
+adwdfsdd
+qwdqwdqw
+dqwdwddw
 
-    A.Escena2
+A.Escena2
+```
 
 Donde las cosas funcionan de la siguiente manera:
 
@@ -113,33 +119,41 @@ Para el pixelart comentado anteriormente con la opción 'A' tienes diponibles lo
 
 El cargar_el_movil.txt de esa escena es el siguiente:
 
-    E.Necesitas cargar el móvil con el cargador.
-    A.Escena1
-    +.Coger el cargador.
-    -.Jugar al minecraft.
+```
+E.Necesitas cargar el móvil con el cargador.
+A.Escena1
++.Coger el cargador.
+-.Jugar al minecraft.
+```
 
 El cargar_el_movil.art de esa escena es:
 
-    A.Escena1
-    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-    ww                                 ww
-    ww    ccc                          ww
-    ww   cccccr       ggg             yww
-    ww    c c         www        wwwwwwww
-    wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+```
+A.Escena1
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+ww                                 ww
+ww    ccc                          ww
+ww   cccccr       ggg             yww
+ww    c c         www        wwwwwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+```
 
 Y se vería lo siguiente:
 
-    * La Carga del Móvil : Escena [1-3] *
+```
+* La Carga del Móvil : Escena [1-3] *
 
-     wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-     ww                                 ww
-     ww    ccc                          ww
-     ww   cccccr       ggg             yww
-     ww    c c         www        wwwwwwww
-     wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+ ww                                 ww
+ ww    ccc                          ww
+ ww   cccccr       ggg             yww
+ ww    c c         www        wwwwwwww
+ wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
-    Necesitas cargar el móvil con el cargador.
-     [1] - Coger el cargador.
-     [2] - Jugar al minecraft.
-    Elige una opción [1-2] >>> 
+Necesitas cargar el móvil con el cargador.
+ [1] - Coger el cargador.
+ [2] - Jugar al minecraft.
+Elige una opción [1-2] >>> 
+```
+
+---

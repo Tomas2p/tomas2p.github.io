@@ -53,9 +53,14 @@ ul {
   padding: 0;
 }
 
+.terms-tags {
+  margin-top: 0px;
+}
+
 .terms-tags li {
   margin-left: 0;
   margin-right: 20px;
+  margin-top: 0px;
 }
 
 /* The Overlay (background) */
@@ -140,3 +145,31 @@ ul {
     display: inline;
   }
 }
+
+.inovel-story {
+  margin: 20px 0px;
+  display: none;
+}
+
+.page-header h1 {
+  padding: 12px 0px;
+  margin: 0px;
+  margin-bottom: 12px;
+}
+
+.page-header {
+  padding-bottom: 24px;
+  margin-bottom: 0px;
+}
+
+.post-description {
+  margin-top: 0px;
+}
+
+.post-content a {
+  box-shadow: none;
+}
+
+/* .profile-inner a {
+  transition: var(--link-transition);
+} */
