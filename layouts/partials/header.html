@@ -77,57 +77,6 @@ function closeNav() {
   document.getElementById("myNav").style.display = "none";
 }
 </script>
-<!-- <script>
-function inovelStory() {
-  const links = document.querySelectorAll('a[href^="#"]');
-  const stories = document.querySelectorAll('.inovel-story');
-  const firstStory = stories[0];
-  const firstOptions = firstStory.querySelector('#options');
-  
-  firstStory.classList.add('active');
-  firstStory.style.display = "block";
-  firstOptions.style.display = "block";
-  
-  let previousStory = null;
-
-  links.forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault();
-      const target = this.getAttribute('href').substring(1);
-      
-      // Si es la primera historia, ocultar sus botones al ser seleccionada
-      firstOptions.style.display = 'none';
-      
-      stories.forEach(story => {
-        if (story.id === target) {
-          story.classList.add('active');
-          story.style.display = 'block'; // Mostrar la sección activada
-        } else if (!story.classList.contains('active')) {
-          story.style.display = 'none'; // Ocultar las no activadas
-        }
-      });
-      
-     // Ocultar #options de la historia anterior
-     if (previousStory !== null) {
-        const previousOptions = previousStory.querySelector('#options');
-        if (previousOptions) {
-          previousOptions.style.display = 'none';
-        }
-      }
-
-      // Actualizar la historia anterior
-      previousStory = document.getElementById(target);
-    });
-  });
-}
-
-// Ejecutar la función cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', inovelStory);
-
-// Ejecutar la función cuando se carguen todos los recursos
-window.addEventListener('load', inovelStory());
-
-</script> -->
 
 <header class="header">
     <nav class="nav">
@@ -216,8 +165,8 @@ window.addEventListener('load', inovelStory());
           <!-- Overlay content -->
           <div class="overlay-content">
             {{- range site.Menus.main }}
-            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absURL }}
-            {{- $page_url:= $currentPage.Permalink }}
+            {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL)) | absLangURL }}
+            {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
                   <a href="{{ $menu_item_url }}" title="{{ or (T .Identifier) .Name | default .Name }} {{- cond $is_search (" (Alt + /)" | safeHTMLAttr) ("" | safeHTMLAttr ) }}"
                   {{- if $is_search -}}data-no-instant{{- end -}}

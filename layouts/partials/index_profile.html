@@ -28,13 +28,13 @@
         {{- end }}
         {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
+        <span>{{ i18n "profile_subtitle" .Params.ProfileMode.Subtitle | markdownify }}</span>
         {{- partial "social_icons.html" (dict "icons" site.Params.socialIcons "svg" $.Site.Data.svg "MaskedEmail" site.Params.MaskedEmail) -}}
 
         {{- with .buttons }}
         <div class="buttons">
             {{- range . }}
-            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ or (T .identifier) .name | title }}">
+            <a class="button" href="{{ trim .url " " | absLangURL }}" rel="noopener" title="{{ or (T .identifier) .name | title }}">
                 <span class="button-inner">{{ or (T .identifier) .name | title }}</span>
             </a>
             {{- end }}
