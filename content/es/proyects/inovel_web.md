@@ -21,20 +21,40 @@ Es una reimplementación  en web de la [versión para terminal hecha en C++](/pr
 
 ---
 
-## Historial de versiones
+## Versión nueva
 
-| Versión | Fecha      | Cambios                        |
-| ------- | ---------- | ------------------------------ |
-| v0.0    | 17-08-2023 | - Idea                         |
-| v0.1    | 21-08-2023 | - Muchos JS                    |
-| v0.2    | 27-08-2023 | - Funcion basica de html y css |
-| v0.3    | 01-09-2023 | - JS y json funciona           |
-| v0.5    | 09-10-2023 | - Mejor html, css y js         |
-| v0.6    | 19-10-2023 | - Orden y colores              |
+Integrada en la web actual y respetando los estilos actuales.
+
+### ¿Cómo funciona?
+
+Usando `div` para las distintas secciones estas se ocultan o muestran según el botón pulsado por el usuario.
+
+### Posibles mejoras
+
+- [ ] Usar plantillas hugo para markdown, para simplificar la creación de historias.
+- [ ] Crear una manera de que los usuarios puedan crear sus propias historias.
+- [ ] Seguimiento de progreso de la historia, colleccionables y logros.
 
 ---
 
-## Ya implementado
+## Versión antigua
+
+Anterior web construida desde cero, como daba problemas con moviñes y demás decidí cambiar a la versión nueva.
+
+### Historial de versiones
+
+| Versión |   Fecha    | Cambios                        |
+| :-----: | :--------: | ------------------------------ |
+|  v0.0   | 17-08-2023 | - Idea                         |
+|  v0.1   | 21-08-2023 | - Muchos JS                    |
+|  v0.2   | 27-08-2023 | - Funcion basica de html y css |
+|  v0.3   | 01-09-2023 | - JS y json funciona           |
+|  v0.5   | 09-10-2023 | - Mejor html, css y js         |
+|  v0.6   | 19-10-2023 | - Orden y colores              |
+
+---
+
+### Ya implementado
 
 - [x] Gallery display
 - [x] Cards per story with title, description, image, and status
@@ -43,7 +63,7 @@ Es una reimplementación  en web de la [versión para terminal hecha en C++](/pr
 
 ---
 
-## ToDo
+### ToDo
 
 - [ ] yaml support
 - [ ] story.html rework because its broken
@@ -54,7 +74,7 @@ Es una reimplementación  en web de la [versión para terminal hecha en C++](/pr
 
 ---
 
-## Imagenes
+### Imagenes
 
 ![Imagen de la web INovel](https://github.com/tomas2p/inovel/blob/main/image.png?raw=true)
 

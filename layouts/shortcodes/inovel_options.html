@@ -1,0 +1,5 @@
+<div id="options">
+  {{- $content := .Inner -}}
+  {{- $content | replaceRE "\\[(.*?)\\]\\((.*?)\\)" "<a href=\"$2\" class=\"button\"><span class=\"button-inner\">$1</span></a>" | safeHTML -}}
+</div>
+

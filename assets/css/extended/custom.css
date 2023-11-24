@@ -170,6 +170,12 @@ ul {
   box-shadow: none;
 }
 
-/* .profile-inner a {
-  transition: var(--link-transition);
-} */
+.inovel-story #options {
+  justify-content: left;
+  margin: 0px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

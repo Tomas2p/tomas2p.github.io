@@ -8,6 +8,8 @@ description: "Encuentra la manera de cargar tu teléfono."
 SceneCount: 7
 ShowWordCount: false
 ShowReadingTime: true
+# layout: inovel_story
+loadInovelScript: true
 # hidden: true
 ---
 
