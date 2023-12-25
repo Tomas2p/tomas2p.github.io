@@ -11,6 +11,10 @@
   --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
   --signature: var(--brand-color);
   --signature-bg: var(--brand-color);
+  --post-width: 740px;
+  --main-width: 740px;
+  text-align: justify;
+  --radius: 15px;
 }
 
 .dark {
@@ -26,6 +30,13 @@
   --link-hover-underline-color: var(--link-hover-color);
   --link-hover-underline-shadow: 0 2px 0 var(--link-hover-underline-color);
 }
+
+
+/* No funciona no carga el fondo de la página.
+body {
+  background-image: url("../../../static/img/wave-haikei.svg")!important;
+  background-size: 100%!important;
+} */
 
 .page-title-links {
   display: flex;

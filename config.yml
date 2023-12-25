@@ -58,7 +58,7 @@ params:
     enabled: true
     title: Tomás Pino Pérez
     subtitle: >
-      Ingeniero en formación, apasionado por la programación y la narrativa visual.
+      Ingeniero en formación, apasionado por la programación y la narrativa visual. 
       Equilibrando líneas de código con guiones de cortometrajes. 💻🎞️
     imageUrl: "https://avatars.githubusercontent.com/u/91573621?v=4" # optional
     imageTitle: "Imagen de perfil de Tomas2p" # optional
