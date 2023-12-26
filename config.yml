@@ -11,7 +11,7 @@ buildExpired: false
 enableEmoji: true
 
 params:
-  # env: production
+  env: production
   author: Tomas2p
   description: "Portfolio de Tomas2p"
   # mainSections: proyects

@@ -60,6 +60,10 @@ body {
   margin-inline-start: .25em;
 }
 
+.meta-item #post_meta_icon {
+  margin: 0;
+}
+
 /* .meta-item .post-links a:before {
   content: "/";
 } */
