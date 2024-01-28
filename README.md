@@ -1,3 +1,3 @@
-# tomas2p.github.io
+# Tomas2p.github.io
 
 Portfolio
