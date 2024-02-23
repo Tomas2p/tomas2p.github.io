@@ -93,7 +93,7 @@
   {{- if .Content }}
   <div class="post-content">
     <!-- Las 2 lineas siguientes no hacen nada -->
-    {{- if or (eq .Layout "inovel_story") (eq .Layout "photos_gallery") (eq .layout "photos_gallery") -}}
+    {{- if or (eq .Layout "inovel_story") (eq .Layout "photos_gallery") -}}
     {{- partial (printf "%s.html" .Layout) . -}}
     <!-- Las 2 lineas anteriores no hacen nada -->
     {{- else if not (.Param "disableAnchoredHeadings") }}
