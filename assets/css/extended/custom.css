@@ -32,6 +32,18 @@
 }
 
 
+/* Estilos para el layout de masonry */
+.masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.masonry img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* No funciona no carga el fondo de la página.
 body {
   background-image: url("../../../static/img/wave-haikei.svg")!important;
