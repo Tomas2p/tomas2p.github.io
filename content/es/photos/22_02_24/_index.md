@@ -1,7 +1,7 @@
 ---
 title: Sesión - Piedras Rojas
 date: 2024-02-22
-layout: gallery
+DisplayGallery: true
 image: wave-haikei.png
 description: |
   Fotografías de la sesión - Piedras Rojas
