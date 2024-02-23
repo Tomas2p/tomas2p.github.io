@@ -8,21 +8,21 @@
     const stories = document.querySelectorAll('.inovel-story');
     const firstStory = stories[0];
     const firstOptions = firstStory.querySelector('#options');
-
+    
     firstStory.classList.add('active');
     firstStory.style.display = "block";
     firstOptions.style.display = "flex";
-
+    
     let previousStory = null;
-
+  
     links.forEach(link => {
-      link.addEventListener('click', function (event) {
+      link.addEventListener('click', function(event) {
         event.preventDefault();
         const target = this.getAttribute('href').substring(1);
-
+        
         // Si es la primera historia, ocultar sus botones al ser seleccionada
         firstOptions.style.display = 'none';
-
+        
         stories.forEach(story => {
           if (story.id === target) {
             story.classList.add('active');
@@ -31,7 +31,7 @@
             story.style.display = 'none'; // Ocultar las no activadas
           }
         });
-
+        
         // Ocultar #options de la historia anterior
         if (previousStory !== null) {
           const previousOptions = previousStory.querySelector('#options');
@@ -39,19 +39,19 @@
             previousOptions.style.display = 'none';
           }
         }
-
+  
         // Actualizar la historia anterior
         previousStory = document.getElementById(target);
       });
     });
   }
-
+  
   // Ejecutar la función cuando el DOM esté listo
   document.addEventListener('DOMContentLoaded', inovelStory);
-
+  
   // Ejecutar la función cuando se carguen todos los recursos
   window.addEventListener('load', inovelStory());
-
+  
 </script>
 {{- end -}}
 
@@ -60,13 +60,13 @@
     {{ partial "breadcrumbs.html" . }}
 
     {{- if $isNewsletter -}}
-    {{- partial "newsletter_brand.html" . }}
+      {{- partial "newsletter_brand.html" . }}
     {{- end -}}
     <h1 class="post-title">
       {{- if $isNewsletter -}}
-      {{- replace .Title (.Param "titlePrefix") (.Param "titlePrefixReplace") -}}
+        {{- replace .Title (.Param "titlePrefix") (.Param "titlePrefixReplace") -}}
       {{- else -}}
-      {{- .Title -}}
+        {{- .Title -}}
       {{- end -}}
       {{- if .Draft -}}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end -}}
     </h1>
@@ -112,23 +112,22 @@
     {{- end }}
 
     {{- if $isNewsletter }}
-    <div class="newsletter-sub">
-      <div class="notice">
-        {{- if site.Params.newsletter.notice.usePartial }}
-        {{- partial "newsletter_notice.html"}}
-        {{- else }}
-        {{- site.Params.newsletter.notice.content | default "Thanks for reading, if you like it, please subscribe
-        below." }}
-        {{- end }}
+      <div class="newsletter-sub">
+        <div class="notice">
+          {{- if site.Params.newsletter.notice.usePartial }}
+            {{- partial "newsletter_notice.html"}}
+          {{- else }}
+            {{- site.Params.newsletter.notice.content | default "Thanks for reading, if you like it, please subscribe below." }}
+          {{- end }}
+        </div>
+        {{- partial "newsletter_sub_form.html"}}
       </div>
-      {{- partial "newsletter_sub_form.html"}}
-    </div>
     {{- end }}
   </footer>
 
   {{- if not (.Param "noComments") }}
-  <div class="comments-separator"></div>
-  {{- partial "comments.html" . }}
+    <div class="comments-separator"></div>
+    {{- partial "comments.html" . }}
   {{- end }}
 </article>
 
