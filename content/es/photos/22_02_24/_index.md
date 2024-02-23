@@ -2,7 +2,7 @@
 title: Sesión - Piedras Rojas
 date: 2024-02-22
 layout: photos_gallery
-image: /static/photos/22_02_24/imagen1.png
+image: wave-haikei.png
 ---
 
 # Galería de Fotos - Octubre
@@ -11,7 +11,7 @@ En esta galería encontrarás una selección de fotos destacadas del mes de octu
 
 ## Foto 1
 
-![Descripción de la Foto 1](/static/photos/22_02_24/imagen1.png)
+![Descripción de la Foto 1](wave-haikei.png)
 
 - **Fecha:** 2024-10-05
 - **Autor:** Autor 1
@@ -19,14 +19,14 @@ En esta galería encontrarás una selección de fotos destacadas del mes de octu
 
 ## Foto 2
 
-![Descripción de la Foto 2](/static/photos/22_02_24/imagen1.png)
+![Descripción de la Foto 2](wave-haikei.png)
 - **Fecha:** 2024-10-12
 - **Autor:** Autor 2
 - **Descripción:** Breve descripción de la foto 2.
 
 ## Foto 3
 
-![Descripción de la Foto 3](/static/photos/22_02_24/imagen1.png)
+![Descripción de la Foto 3](wave-haikei.png)
 
 - **Fecha:** 2024-10-20
 - **Autor:** Autor 3
