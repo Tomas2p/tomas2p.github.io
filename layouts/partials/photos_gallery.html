@@ -1,0 +1,11 @@
+<div class="masonry">
+  {{ range .Pages }}
+  <div class="foto">
+      <img src="{{ .Params.image }}" alt="{{ .Params.title }}">
+      <p>{{ .Params.title }}</p>
+      <p>{{ .Params.date }}</p>
+      <p>{{ .Params.author }}</p>
+      <p>{{ .Params.description }}</p>
+  </div>
+  {{ end }}
+</div>
