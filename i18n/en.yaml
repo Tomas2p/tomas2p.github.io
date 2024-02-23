@@ -54,3 +54,6 @@
 
 - id: tags
   translation: Tags
+
+- id: photos
+  translation: Photos
