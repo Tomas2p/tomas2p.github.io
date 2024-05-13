@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import type { Project } from "../types/config";
+import { Markdown } from "@astropub/md";
+
+type Props = Project;
+
+const { title, description, image, year, url, finish } = Astro.props;
+const stateColor = finish ? "text-green-500" : "text-yellow-500";
+const stateMessage = finish ? "Finished" : "Ongoing";
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="sm:py-5 py-10 flex flex-col sm:flex-row gap-6 group-hover:opacity-60 hover:!opacity-100 transition-opacity"
+>
+  <div class="relative h-full bg-gray-700 rounded-lg aspect-video sm:h-[150px]">
+    <Image
+      width={1920}
+      height={1080}
+      src={image}
+      alt={""}
+      class="w-full h-full object-cover border-2 border-gray-700 rounded-lg aspect-video"
+    />
+    <div
+      class="absolute inset-0 flex items-center justify-center opacity-100 transition-opacity duration-300 ease-in-out bg-black bg-opacity-50 hover:opacity-0"
+    >
+      <p class="text-white text-2xl">{title}</p>
+    </div>
+  </div>
+  <div>
+    <div class="flex items-center gap-1 mb-2">
+      <h2 class="font-medium">{title}</h2>
+      <span class="opacity-60">· {year} ·</span>
+      <span class={`font-medium opacity-60 ${stateColor}`}>{stateMessage}</span>
+    </div>
+    <div class="opacity-60">
+      <Markdown of={description} />
+    </div>
+  </div>
+</a>
