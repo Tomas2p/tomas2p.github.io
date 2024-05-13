@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>INovel on Tomas2p</title>
+    <link>http://localhost:1313/inovel/</link>
+    <description>Recent content in INovel on Tomas2p</description>
+    <generator>Hugo</generator>
+    <language>es</language>
+    <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/inovel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Carga el Móvil</title>
+      <link>http://localhost:1313/inovel/carga_el_movil/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/inovel/carga_el_movil/</guid>
+      <description> Escena 1: El cargador ¿Dónde pusiste el cargador de tu teléfono?&#xA;Ir al cuarto Ir al trastero Escena 2: La habitación Estás en tu habitación, pero algo parece estar fuera de lugar.&#xA;Ir al pasillo Ir al balcón Escena 3: El balcón El aire fresco te recibe mientras te asomas al balcón.&#xA;Regresar a la habitación Explorar el vecindario </description>
+    </item>
+    <item>
+      <title>Carga el Móvil old</title>
+      <link>http://localhost:1313/inovel/carga_el_movil-old/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/inovel/carga_el_movil-old/</guid>
+      <description>Escena 1: El cargador ¿Donde pusiste el cargador de tu teléfono?&#xA;Ir al cuarto Ir al trastero Aquí solo esta la vieja PC, te acabas echando una partida al DOOM y tu móvil muere.&#xA;Final 2: DOOM Para jugar otra vez recarga la página.&#xA;Miras por tu cuarto a ver si esta el cargador y por obra de el de arriba la encuentras entre las sábanas, quizas deverias hacer la cama, ya es mediodía.</description>
+    </item>
+    <item>
+      <title>El Tesoro Perdido</title>
+      <link>http://localhost:1313/inovel/el_tesoro_perdido/</link>
+      <pubDate>Fri, 17 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/inovel/el_tesoro_perdido/</guid>
+      <description>Cueva oscura Te encuentras en una antigua cueva oscura, todas tus pistas sobre el tesoro perdido del legendario rey de Nubilar te han llevado hasta esa cueva.&#xA;Explorar la cueva en busca de pistas. Irte de ruta por ahí. Regresar a la entrada de la cueva. Inscripción en la pared Descubres una antigua inscripción en algo parecido a jeroglíficos egipcios en una pequeña parte de la pared prácticamente imperceptible a una vista general de la sala.</description>
+    </item>
+    <item>
+      <title>Historias Archivadas</title>
+      <link>http://localhost:1313/inovel/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/inovel/archives/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
