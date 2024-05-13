@@ -8,7 +8,7 @@ import type {
   BlogPageContent,
   HomePageContent,
   Images,
-} from "./types/config";
+} from "./types/config.ts";
 
 export const identity: Identity = {
   name: "Tomás Pino Pérez",
