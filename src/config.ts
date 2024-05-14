@@ -5,7 +5,6 @@ import type {
   AboutPageContent,
   ProjectPageContent,
   GalleryPageContent,
-  BlogPageContent,
   HomePageContent,
   Images,
 } from "./types/config.ts";
@@ -212,14 +211,4 @@ export const galleryPageContent: GalleryPageContent = {
       year: "2023",
     },
   ],
-};
-
-// Blog (/blog)
-export const blogPageContent: BlogPageContent = {
-  seo: {
-    title: "Blog | " + identity.name,
-    description: "Thoughts, stories and ideas.",
-    image: identity.logo,
-  },
-  subtitle: "Thoughts, stories and ideas.",
 };

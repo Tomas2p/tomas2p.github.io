@@ -98,8 +98,3 @@ export type GalleryPageContent = {
   subtitle: string;
   photos: Photo[];
 }
-
-export type BlogPageContent = {
-  seo: SEOInfo;
-  subtitle: string;
-};
