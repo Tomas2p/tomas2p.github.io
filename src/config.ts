@@ -193,20 +193,17 @@ export const galleryPageContent: GalleryPageContent = {
   subtitle: "Check out what I've been working on. Some of my favorite photos. ON PROGRESS",
   photos: [
     {
-      title: "Hexagon",
-      collection: "Rand",
+      title: "Contemporary Sitter",
       image: "/tomas2p_2.jpg",
       year: "2023",
     },
     {
-      title: "Lake",
-      collection: "Bethancourt",
+      title: "Contemplative Stream",
       image: "/tomas2p.png",
       year: "2023",
     },
     {
-      title: "Lake",
-      collection: "Bethancourt",
+      title: "Urban Explorer",
       image: "/tomas2p_3.jpg",
       year: "2023",
     },

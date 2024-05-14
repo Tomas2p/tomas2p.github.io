@@ -88,7 +88,7 @@ export type ProjectPageContent = {
 
 export type Photo = {
   title: string;
-  collection: string;
+  collection?: string;
   image: string;
   year: string;
 }
